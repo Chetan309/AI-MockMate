@@ -23,8 +23,8 @@ const HeroSection = () => {
         ></div>
 
         {/* Content */}
-        <div className="relative text-center z-10 max-w-4xl">
-          <h2 className="text-2xl md:text-4xl font-extrabold text-green-900">
+        <div className="relative text-center z-10 mt-20 md:mt-10 max-w-4xl">
+          <h2 className="text-2xl  md:text-4xl font-extrabold text-green-900">
           AI MockMate: Your Gateway to Interview Success!!
           </h2>
           <h3 className="text-xl md:text-2xl font-semibold mt-2 text-green-800">
@@ -33,15 +33,15 @@ const HeroSection = () => {
           <p className="text-lg md:text-xl mt-2 text-center">
           Unlock the power of AI to accelerate your career growth with intelligent mock interviews and personalized feedback. AI MockMate provides a cutting-edge, AI-driven platform designed to simulate real-world interview experiences.
           </p>
-          <div className="flex flex-col md:flex-row gap-2 justify-center mt-6 md:mt-10">
+          <div className="flex flex-col md:flex-row gap-2 justify-center items-center mt-6 md:mt-10">
             <Link href={"/sign-up"}>
-              <Button className="flex justify-center gap-2 bg-slate-800 p-4 md:p-6 text-base md:text-md hover:bg-slate-700 rounded-lg">
+              <Button className="flex justify-center gap-2 mt-6 bg-slate-800 p-4 md:p-6 text-base md:text-md hover:bg-slate-700 rounded-lg">
                 Register Now
                 <AiOutlineUser />
               </Button>
             </Link>
             <Link href={"/sign-up"}>
-              <Button className="flex justify-center gap-2 bg-green-700 p-4 md:p-6 hover:bg-green-800 text-base md:text-md rounded-lg">
+              <Button className="flex justify-center gap-2 mt-6 bg-green-700 p-4 md:p-6 hover:bg-green-800 text-base md:text-md rounded-lg">
                 Know More
                 <MdOutlineWidgets />
               </Button>

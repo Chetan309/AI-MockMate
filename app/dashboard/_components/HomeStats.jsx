@@ -1,12 +1,12 @@
 import React from "react";
 const HomeStats = () => {
   return (
-    <>
+     <>
       <div className="text-center mt-28" id="howitworks ">
         <h2 className="text-white font-extrabold text-[30px] md:text-[40px]">
           HOW IT WORKS?
         </h2>
-      </div>
+        </div>
       <div className="p-16 grid md:grid-cols-2 gap-5">
         <div className="rounded-lg border-4 border-gray-100 bg-white p-4 shadow-sm transition hover:shadow-lg sm:p-6">
           <div className="text-lg my-4 font-semibold">
@@ -149,7 +149,7 @@ const HomeStats = () => {
           </div>
         </div>
       </div>
-    </>
+      </>
   );
 };
 

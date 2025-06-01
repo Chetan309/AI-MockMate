@@ -46,7 +46,7 @@ export default function Page() {
               </p>
             </div>
 
-            <SignIn
+            <SignIn 
               appearance={{
                 elements: {
                   formButtonPrimary: {

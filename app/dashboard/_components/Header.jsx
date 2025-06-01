@@ -12,11 +12,12 @@ import { FaUserCircle } from "react-icons/fa";
 
 function Header() {
   const path = usePathname();
-  useEffect(() => {
-    console.log(path);
-  });
   const router = useRouter();
   const { isSignedIn } = useUser();
+
+  useEffect(() => {
+    console.log(path);
+  }, [path]);
   const NaivgateToDashboard = () => {
     router.push("/dashboard/");
   };
@@ -27,7 +28,7 @@ function Header() {
     router.push("/aboutdeveloper/");
   };
   const NaivgateTohowitworks = () => {
-    router.push("/#howitworks");
+    router.push("/#howitworks/");
   };
 
   return (
@@ -35,16 +36,15 @@ function Header() {
       <div className="relative flex p-4 justify-between items-center shadow-sm text-gray-600">
         {/* Background image with opacity */}
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-55 z-[-1]"
-          style={{
-            backgroundImage: "url('/h3.jpg')",
-          }}
+          className="absolute inset-0 opacity-55 z-[-1]"
+          style={{ backgroundColor: "#c49e1a" }}
         ></div>
+
 
         {/* Content */}
         <div className="flex gap-10 cursor-pointer">
         <Image
-            src="/logo.png"
+            src="/pic.png"
             width={190}
             height={100}
             alt="AI Mockmate Logo"
@@ -52,7 +52,7 @@ function Header() {
           />
           <ul className="hidden md:flex gap-2 font-semibold">
             <li
-              className={`flex gap-1 font-extrabold hover:bg-slate-800 hover:rounded-md hover:text-slate-200 pr-4 pl-4 text-center transition-all cursor-pointer p-2 ${
+              className={`flex gap-1 font-extrabold text-black hover:bg-slate-800 hover:rounded-md hover:text-slate-200 pr-4 pl-4 text-center transition-all cursor-pointer p-2 ${
                 path == "/"
               }`}
               onClick={NaivgateToHome}
@@ -63,7 +63,7 @@ function Header() {
               Home
             </li>
             <li
-              className={`flex gap-1 font-extrabold pr-4 pl-4 hover:bg-slate-800 hover:rounded-md hover:text-slate-200 transition-all cursor-pointer p-2 ${
+              className={`flex gap-1 font-extrabold pr-4 pl-4 text-black hover:bg-slate-800 hover:rounded-md hover:text-slate-200 transition-all cursor-pointer p-2 ${
                 path == "/dashboard"
               }`}
               onClick={NaivgateToDashboard}
@@ -74,7 +74,7 @@ function Header() {
               Dashboard
             </li>
             <li
-              className={`flex gap-1 font-extrabold pr-4 pl-4 hover:bg-slate-800 hover:rounded-md hover:text-slate-200 transition-all cursor-pointer p-2 ${
+              className={`flex gap-1 font-extrabold pr-4 pl-4 text-black hover:bg-slate-800 hover:rounded-md hover:text-slate-200 transition-all cursor-pointer p-2 ${
                 path == "/#howitworks" && "text-cyan-700 font-bold"
               }`}
               onClick={NaivgateTohowitworks}
@@ -85,7 +85,7 @@ function Header() {
               How it works
             </li>
             <li
-              className={`flex gap-1 font-extrabold pr-4 pl-4 hover:bg-slate-800 hover:rounded-md hover:text-slate-200 transition-all cursor-pointer p-2 ${
+              className={`flex gap-1 font-extrabold pr-4 pl-4 text-black hover:bg-slate-800 hover:rounded-md hover:text-slate-200 transition-all cursor-pointer p-2 ${
                 path == "/aboutdeveloper" && "text-cyan-700 font-bold"
               }`}
               onClick={NaivgateToaboutdeveloper}
